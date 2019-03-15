@@ -6,7 +6,7 @@
     let template = document.querySelector('.product');
     let product = template.cloneNode(true);
 
-    product.querySelector('.product_code').textContent = 'Код: ' + o.code;
+    product.querySelector('.product_code').textContent = 'Код: ' + +o.code;
     product.querySelector('.product_status').textContent = 'Наличие';
     product.querySelector('.product_photo img').src = o.primaryImageUrl;
     product.querySelector('.product_description .product__link').textContent = o.title;
