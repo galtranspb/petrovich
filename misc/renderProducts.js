@@ -10,7 +10,7 @@
     product.querySelector('.product_status').textContent = 'Наличие';
     product.querySelector('.product_photo img').src = o.primaryImageUrl;
     product.querySelector('.product_description .product__link').textContent = o.title;
-    product.querySelector('.product_tags .url--link').textContent = o.assocProducts;
+    window.createAssociatedProducts(o.assocProducts);
     product.querySelector('.goldPrice').textContent = o.priceGold;
     product.querySelector('.retailPrice').textContent = o.priceRetail;
     product.querySelector('.btn').setAttribute('data-product-id', o.productId);
