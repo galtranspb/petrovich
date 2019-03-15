@@ -11,8 +11,8 @@
     product.querySelector('.product_photo img').src = o.primaryImageUrl;
     product.querySelector('.product_description .product__link').textContent = o.title;
     window.createAssociatedProducts(o.assocProducts);
-    product.querySelector('.goldPrice').textContent = o.priceGold;
-    product.querySelector('.retailPrice').textContent = o.priceRetail;
+    product.querySelector('.goldPrice').textContent = o.priceGoldAlt;
+    product.querySelector('.retailPrice').textContent = o.priceRetailAlt;
     product.querySelector('.btn').setAttribute('data-product-id', o.productId);
 
     return product;
