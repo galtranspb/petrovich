@@ -39,8 +39,6 @@
       'data-current-active': false
     });
     product.querySelector('.unit--infoInn').textContent = '1 упак. = ' + o.unitRatioAlt + 'м. кв.';
-    product.querySelector('.up').setAttribute('data-arrow', 'up');
-    product.querySelector('.down').setAttribute('data-arrow', 'down');
     product.querySelector('.btn').setAttribute('data-product-id', o.productId);
 
     return product;

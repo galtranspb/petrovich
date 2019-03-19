@@ -36,14 +36,13 @@
     };
 
     let onArrowClick = function (e, item) {
-      let arrowDirection = e.target.getAttribute('data-arrow');
       let input = item.querySelector('.stepper-input');
       let value = +input.getAttribute('value');
 
-      if(arrowDirection === 'up') {
+      if(e.target.classList.contains('up')) {
         ++value;
       }
-      if (arrowDirection === 'down' && value > 0) {
+      if (e.target.classList.contains('down') && value > 0) {
         --value;
       }
       input.setAttribute('value', value);
@@ -54,7 +53,7 @@
     if (e.target.getAttribute('data-current-active') === 'false') {
       onUnitClick($item);
     }
-    if (e.target.getAttribute('data-arrow')) {
+    if (e.target.classList.contains('stepper-arrow')) {
       onArrowClick(e, $item);
     }
   }
