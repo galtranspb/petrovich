@@ -30,3 +30,5 @@ priceRetail - цена стандартная за упаковку
 •	Mozilla Firefox 30+,
 •	Opera 20+,
 •	Safari 8+.
+
+https://anatolysokolov.github.io/petrovich/
