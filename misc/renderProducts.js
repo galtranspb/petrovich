@@ -14,7 +14,7 @@
     let retailPrice = product.querySelector('.retailPrice');
     let units = product.querySelectorAll('.ng-binding');
 
-    product.setAttribute('id', o.productId);
+    product.setAttribute('data-product-id', o.productId);
     product.querySelector('.product_code').textContent = 'Код: ' + +o.code;
     product.querySelector('.product_status').textContent = 'Наличие';
     product.querySelector('.product_photo img').src = 'https:' + o.primaryImageUrl;
@@ -32,12 +32,10 @@
     });
     setAttributes(units[0], {
       'data-units': 'm2',
-      'data-product-id': o.productId,
       'data-current-active': true
     });
     setAttributes(units[1], {
       'data-units': 'pack',
-      'data-product-id': o.productId,
       'data-current-active': false
     });
     product.querySelector('.unit--infoInn').textContent = '1 упак. = ' + o.unitRatioAlt + 'м. кв.';
@@ -55,7 +53,7 @@
       fragment.appendChild($item);
     });
     $container.appendChild(fragment);
-    $container.addEventListener('click', window.onUnitWrapperClick);
+    $container.addEventListener('click', window.onContainerClick);
   };
 
   renderProducts(window.data);
