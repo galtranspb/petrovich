@@ -35,10 +35,27 @@
       })
     };
 
+    let onArrowClick = function (e, item) {
+      let arrowDirection = e.target.getAttribute('data-arrow');
+      let input = item.querySelector('.stepper-input');
+      let value = +input.getAttribute('value');
+
+      if(arrowDirection === 'up') {
+        ++value;
+      }
+      if (arrowDirection === 'down' && value > 0) {
+        --value;
+      }
+      input.setAttribute('value', value);
+    };
+
     let $item = getItem(e);
 
     if (e.target.getAttribute('data-current-active') === 'false') {
       onUnitClick($item);
+    }
+    if (e.target.getAttribute('data-arrow')) {
+      onArrowClick(e, $item);
     }
   }
 })();
