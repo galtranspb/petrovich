@@ -7,6 +7,12 @@
     }
   };
 
+  let clearContainer = function (el) {
+    while (el.firstChild) {
+      el.removeChild(el.firstChild);
+    }
+  };
+
   let createProduct = function (o) {
     let template = document.querySelector('.product');
     let product = template.cloneNode(true);
@@ -52,6 +58,7 @@
       let $item = createProduct(el);
       fragment.appendChild($item);
     });
+    clearContainer($container);
     $container.appendChild(fragment);
     $container.addEventListener('click', window.onContainerClick);
   };
