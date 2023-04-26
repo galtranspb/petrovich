@@ -31,4 +31,4 @@ priceRetail - цена стандартная за упаковку
 •	Opera 20+,
 •	Safari 8+.
 
-https://anatolysokolov.github.io/petrovich/
+https://galtranspb.github.io/petrovich/
